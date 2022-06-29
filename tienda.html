@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--stilos css-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../styles.css" />
+    <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/377c67a700.js" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <title>tienda</title>
+  </head>
+
+  <body>
+    <!-- pagina icomerce landingpage -->
+    <!--navegacion "logo"-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html"
+          ><img
+            src="../img/img.logo.jpg"
+            width="100"
+            height="60"
+            alt="reno logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <!--navegacion "logo"-->
+
+    <!-- navegacion "paginas secundarias" -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../index.html"
+                >Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preguntas frecuentes</a>
+            </li>
+          </ul>
+           <!-- navegacion "paginas secundarias" -->
+
+           <!-- carrito de compras -->
+          <button class="ham">
+            <span class="br-1"></span>
+            <span class="br-2"></span>
+            <span class="br-3"></span>
+        </button>
+          <div class="navbar" id="navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <img src="img/carritoCompra.png" class="nav-link dropdown-toggle img-fluid" height="70px"
+                        width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"></img>
+                    <div id="carrito" class="dropdown-menu" aria-labelledby="navbar">
+                        <table id="lista-carrito" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+                        <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                        <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">ProcesaCompra</a>                        
+                    </div>
+                </li>
+            </ul>
+        </div>    
+        </div>
+      </nav>
+    </header>
+      <!-- fin de carrito de compras. -->
+
+            <!-- banner tienda-->
+    
+      <div class="image-container">
+        <div class="text">trucker</div>
+      </div>
+        <!-- fin banner tienda -->
+        <!--productos contenido-principaltienda "cards"-->
+        <main >
+          <h2 class="text-center">Nuestros productos</h2>
+          <div class="tarjetas" id="listar-productos"> </div>
+            <!-- cards -->
+              <template id="template-card">
+                  <div class="producto">
+                      <img src="../img/gorra1.jpg" id="imagen" alt="Imagen del producto, que es una gorra">
+                      <div class="texto-producto text-center first-item">
+                          <h3 id="titulo">gorra1</h3>
+                         
+                          <h4 class="card-title pricing-card-title precio"><span class="precio">$1599</span></h4>
+                          <a href="#" class="btn agregar-carrito"  data-id="1"><span class="texto-carrito">agregar al carrito</span></a>
+                             <!-- <button class="boton-tarjeta">
+                              <span>comprar</span>
+                              <svg>
+                                <rect x="0" y="0" fill=""></rect>
+                              </svg>
+                            </button>  -->
+                      </div>
+                  
+                  </div>
+                  
+              </template>
+      </main>
+      <!--fin productos tienda "cards"-->
+     
+     <!--FOOTER-->
+     <footer>
+      <div class="container__footer">
+        <div class="box__footer">
+            <div class="logo">
+                <img src="../img/img.logo.jpg" alt="">
+            </div>
+            <div class="terms">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit libero officiis quam doloremque reprehenderit quae corporis! Delectus architecto officia praesentium atque laudantium, nam deleniti sapiente deserunt.</p>
+            </div>
+        </div>
+        <div class="box__footer">
+            <h2>Contactanos</h2>
+            <a href="#"><i class="fa brands fa-whatsapp"></i>1143546591</a>
+            <a href="#"><i class="fa fa-envelope"></i>CARIBU_MLC@outlok.com</a>
+            <a href="#"><i class="fa fa-map-marked"></i>Argentina,buenos aires</a>
+        </div>
+        
+       
+        <div class="box__footer">
+            <h2>Seguinos en las redes</h2>
+            <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+        </div>
+
+    </div>
+
+    <div class="box__copyright">
+        <hr>
+        <p>Todos los derechos reservados © 2022 <b>-Tienda MLC</b></p>
+    </div>
+    </footer>
+  
+    <!--javascritp-->
+    <!-- jquery  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+   
+
+    
+     <!-- custom -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="carrito.js"></script>
+    <script src="stock.js"></script>
+    <script src="pedidos.js"></script>
+  </body>
+</html>

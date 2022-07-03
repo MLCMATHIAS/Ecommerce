@@ -1,4 +1,4 @@
-window.onload = iniciar;
+
 
 // LOS PRODUCTOS SE VAN AGREGANDO.
 const fragment = document.createDocumentFragment(); //CREAN ESPACIO DONDE IRA LA CARD

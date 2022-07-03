@@ -1,4 +1,4 @@
-window.onload = iniciar;
+
 
 const ham = document.querySelector('.ham')
 const enlaces = document.querySelector('.enlaces-menu')

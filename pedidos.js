@@ -1,4 +1,4 @@
-
+window.onload = function(){}
 
 const carro = new Carrito ()
 const carrito = document.getElementById('carrito')
@@ -23,5 +23,6 @@ function cargarEventos(){
     if(productos){
     productos.addEventListener('click', (e)=>{carro.comprarProducto(e)})
     }
-
 }
+
+    

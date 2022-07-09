@@ -214,7 +214,7 @@ footer {
 /* TIENDA */
 /* banner */
 .image-container {
-  background-image: url("./img/banner\ tienda-1.jpg");
+  background-image: url("../img/banner.jpg");
   background-size: auto;
   position: relative;
   height: 300px;

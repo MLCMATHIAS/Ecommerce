@@ -1,6 +1,6 @@
 # proyecto final coderhouse.(JavasCript).
 
-<img src="./README/img.png" alt="img" width="400"/>
+<img src="img/img.png" alt="img" width="400"/>
 
 Tecnologías usadas: 
 - HTML.

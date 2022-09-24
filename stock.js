@@ -2,7 +2,7 @@
 
 // LOS PRODUCTOS SE VAN AGREGANDO.
 const fragment = document.createDocumentFragment(); //CREAN ESPACIO DONDE IRA LA CARD
-const templateCard = document.getElementById('template-card').content; //LA CARD
+const templateCard = document.getElementById('template-card'); 
 const items = document.getElementById('listar-productos')
 //MI ARRAY DE OBJETOS (PRODUCTOS EN VENTA)
 class Producto {

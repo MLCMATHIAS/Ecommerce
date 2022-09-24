@@ -8,7 +8,6 @@ ham.addEventListener('click', () => {
 })
 
 class Carrito {
-
     //Añadir producto al carrito
     comprarProducto(e) {
         e.preventDefault()

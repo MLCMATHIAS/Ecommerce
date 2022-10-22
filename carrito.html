@@ -18,13 +18,12 @@
     />
     <title>tienda</title>
   </head>
-
   <body>
     <!-- pagina icomerce landingpage -->
     <!--navegacion "logo"-->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html"
+        <a class="navbar-brand" href="./index.html"
           ><img
             src="./img/logo.jpg"
             width="100"
@@ -52,7 +51,7 @@
                 >Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">tienda</a>
+              <a class="nav-link" href="tienda.html">tienda</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Nosotros</a>
@@ -65,18 +64,15 @@
             </li>
           </ul>
            <!-- fin navegacion "paginas secundarias" -->
-
-           <!-- carga productos al carrito -->
            <button class="ham">
             <span class="br-1"></span>
             <span class="br-2"></span>
             <span class="br-3"></span>
-          </button>
-           <!-- carrito de compras -->  
-          <div class="navbar" id="navbar">
+        </button>
+        <div class="navbar" id="navbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <img src="./img/carritoCompra.png" class="nav-link dropdown-toggle img-fluid" height="70px"
+                    <img src="img/carritoCompra.png" class="nav-link dropdown-toggle img-fluid" height="70px"
                         width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false"></img>
                     <div id="carrito" class="dropdown-menu" aria-labelledby="navbar">
@@ -93,39 +89,113 @@
                         </table>
 
                         <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
-                        <a href="carrito.html" id="procesar-pedido" class="btn btn-danger btn-block">ProcesaCompra</a>                        
+                        <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                            Compra</a>
                     </div>
                 </li>
             </ul>
-        </div>    
         </div>
-      </nav>
-    </header>
-      <!-- fin de carrito de compras. -->
+    </nav>
+</div>
+</header>
+<div>
+<div class="container">
+    <div class="row justify-content-between mb-5">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </nav>
+    </div>
+</div>
+</div>
 
-            <!-- banner tienda-->
-      <div class="image-container">
-        <div class="text">trucker</div>
-      </div>
-        <!-- fin banner tienda -->
-        <!--productos contenido-principaltienda "cards"-->
-        <main >
-          <h2 class="text-center">Nuestros productos</h2>
-          <div class="tarjetas" id="listar-productos"> </div>
-            <!-- cards -->
-              <template id="template-card">
-                  <div class="producto">
-                      <img src="./img/gorra1.jpg" id="imagen" alt=" es una gorra">
-                      <div class="texto-producto text-center first-item">
-                          <h3 id="titulo"></h3>
-                          <h4 class="card-title pricing-card-title precio"><span class="precio">$2000</span></h4>
-                          <a href="#" class="btn agregar-carrito" data-id="1">agregar al carrito</a>
-                      </div>
-                  </div>
-              </template>
-      </main>
-      <!--fin productos tienda "cards"-->
-     
+<br>
+
+<main>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col">
+            <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+            <form id="procesar-pago" action="#" method="post">
+                <div class="form-group row">
+                    <label for="cliente" class="col-12 col-md-2 col-form-label h2 datos">Cliente :</label>
+                    <div class="col-12 col-md-10">
+                        <input type="text" class="form-control" id="cliente"
+                            placeholder="Ingresa nombre cliente" name="destinatario">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-12 col-md-2 col-form-label h2 datos">Correo :</label>
+                    <div class="col-12 col-md-10">
+                        <input type="text" class="form-control" id="correo" placeholder="Ingresa tu correo"
+                            name="cc_to">
+                    </div>
+                </div>
+
+                <div id="carrito" class="form-group table-responsive">
+                    <table class="table" id="lista-compra">
+                        <thead id="listar-productos">
+                            <tr>
+                                <th scope="col" class="producto-descripcion">Imagen</th>
+                                <th scope="col" class="producto-descripcion">Nombre</th>
+                                <th scope="col" class="producto-descripcion">Precio</th>
+                                <th scope="col" class="producto-descripcion">Cantidad</th>
+                                <th scope="col" class="producto-descripcion">Sub Total</th>
+                                <th scope="col" class="producto-descripcion">Eliminar</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                        <tr>
+                            <th colspan="4" scope="col" class="text-right compra">SUB TOTAL :</th>
+                            <th scope="col">
+                                <p id="subtotal"></p>
+                            </th>
+                            <!-- <th scope="col"></th> -->
+                        </tr>
+                        <tr>
+                            <th colspan="4" scope="col" class="text-right compra">IGV :</th>
+                            <th scope="col">
+                                <p id="igv"></p>
+                            </th>
+                            <!-- <th scope="col"></th> -->
+                        </tr>
+                        <tr>
+                            <th colspan="4" scope="col" class="text-right compra">TOTAL :</th>
+                            <th scope="col">
+                                <p id="total"></p>
+                            </th>
+                            <!-- <th scope="col"></th> -->
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="row justify-content-center" id="loaders">
+                    <img id="cargando" src="img/cargando.gif" width="220">
+                </div>
+
+                <div class="row justify-content-between">
+                    <div class="col-md-4 mb-2">
+                        <a href="index.html" class="btn btn-info btn-block">Seguir comprando</a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <button href="#" class="btn btn-success btn-block" id="procesar-compra">Realizar
+                            compra</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+</div>
+</main>
+
      <!--FOOTER-->
      <footer>
       <div class="container__footer">
@@ -182,7 +252,7 @@
      <!-- custom -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="carrito.js"></script>
-    <script src="stock.js"></script>
+    <script src="compra.js"></script>
     <script src="pedidos.js"></script>
   </body>
 </html>

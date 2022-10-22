@@ -1,5 +1,3 @@
-
-
 const ham = document.querySelector('.ham')
 const enlaces = document.querySelector('.enlaces-menu')
 
@@ -8,6 +6,7 @@ ham.addEventListener('click', () => {
 })
 
 class Carrito {
+
     //Añadir producto al carrito
     comprarProducto(e) {
         e.preventDefault()
@@ -34,10 +33,9 @@ class Carrito {
                 productosLS = productoLS.id;
             }
         });
-      
+
         if (productosLS === infoProducto.id) {
-              // implemento libreria sweetalert.
-            swal.fire({
+            swal({
                 title: "Error!",
                 text: "El producto ya está agregado",
                 icon: "warning",
@@ -127,4 +125,76 @@ class Carrito {
     vaciarLocalStorage() {
         localStorage.clear()
     }
+
+    // procesarPedido
+    procesarPedido(e) {
+        e.preventDefault()
+        if (this.obtenerProductosLocalStorage().length === 0) {
+            swal({
+                title: "Error!",
+                text: "El carrito está vacio",
+                icon: "warning",
+            });
+        }
+        else {
+            location.href = "carrito.html"
+        }
+    }
+
+    leerLocalStorageCompra() {
+        let productosLS
+        productosLS = this.obtenerProductosLocalStorage()
+        productosLS.forEach(function (producto) {
+            const row = document.createElement('tr')
+            row.innerHTML = `
+                <td>
+                    <img src="${producto.imagen}" width=100>
+                </td>
+                <td>${producto.titulo}</td>
+                <td>${producto.precio}</td>
+                <td>
+                    <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
+                </td>
+                <td id='subtotales'>${producto.precio * producto.cantidad}</td>
+                <td>
+                    <i class="borrar-producto fas fa-times-circle" style="font-size:30px" id="${producto.id}" onclick="eliminarProducto(${producto.id})"></i>
+                </td>
+            `;
+            if(listaCompra){
+            listaCompra.appendChild(row) 
+            }
+        }) 
+    }
+
+    calcularTotal() {
+        let productoLS
+        let total = 0, subtotal = 0, igv = 0
+        productoLS = this.obtenerProductosLocalStorage()
+        for (let i = 0; i < productoLS.length; i++) {
+            let element = Number(productoLS[i].precio * productoLS[i].cantidad)
+            total = total + element
+        }
+        igv = parseFloat(total * 0.18).toFixed(2)
+        subtotal = parseFloat(total - igv).toFixed(2)
+
+        if (document.getElementById('subtotal')) {
+            document.getElementById('subtotal').innerHTML = "$ " + subtotal
+        }
+
+        if (document.getElementById('igv')) {
+            document.getElementById('igv').innerHTML = "$ " + igv
+
+
+        }
+        if (document.getElementById('total')) {
+            document.getElementById('total').innerHTML = "$ " + total.toFixed(2)
+        }
+
+
+    }
 }
+ let = eliminarProducto = (productoID) => {
+    compra.eliminarProductoLS(productoID)
+    this?.calcularTotal()
+    }
+

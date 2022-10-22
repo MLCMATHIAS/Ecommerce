@@ -1,6 +1,6 @@
-window.onload = function(){}
 
-const carro = new Carrito ()
+
+const carro = new Carrito()
 const carrito = document.getElementById('carrito')
 const productos = document.getElementById('listar-productos')
 const listaProductos = document.querySelector('#lista-carrito tbody')

@@ -1,25 +1,30 @@
-@import url("https://fonts.googleapis.com/css2? family= Rubik:ital,wght@0,500;1,400 & display=swap");
+/* @import url("https://fonts.googleapis.com/css2? family= Rubik:ital,wght@0,500;1,400 & display=swap"); */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Rubik", sans-serif;
 }
+
 /* menu de navegacion */
-ul li {
+ li {
   list-style: none;
 }
+
 .nav-link {
   font-size: 22px;
   font-family: "Rubik", sans-serif;
 }
+
 a:hover {
   color: #18a362 !important;
   opacity: 7.1;
 }
+
 /* img logo */
 .navbar-brand img {
   width: 100px;
@@ -27,27 +32,32 @@ a:hover {
   border: 3px solid black;
   border-radius: 5px;
 }
+
 /* carrousell */
 .titulo-carrousell {
   color: black;
   font-family: "Rubik", sans-serif;
   font-weight: bold;
 }
+
 .texto-carrousell {
   color: black;
   font-weight: bolder;
 }
+
 /* galeria */
 .container {
   width: 100%;
   margin: auto;
   margin-top: 10px;
 }
+
 .container-galeria {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
 .card {
   display: flex;
   justify-content: end;
@@ -61,6 +71,7 @@ a:hover {
   background-size: cover;
   background-position: center center;
 }
+
 .container-galeria h1 {
   width: 100%;
   text-align: center;
@@ -71,6 +82,7 @@ a:hover {
   color: white;
   text-shadow: 5px 5px 5px black;
 }
+
 .container-galeria h2 {
   width: 100%;
   text-align: center;
@@ -81,6 +93,7 @@ a:hover {
   color: white;
   text-shadow: 5px 5px 5px black;
 }
+
 /* botones */
 .boton {
   width: 100%;
@@ -100,11 +113,13 @@ a:hover {
   position: relative;
   overflow: hidden;
 }
+
 .boton span {
   position: relative;
   z-index: 2;
   transition: 0.3s ease all;
 }
+
 .boton::after {
   content: "";
   width: 100%;
@@ -117,14 +132,17 @@ a:hover {
   transition: 0.4s ease-in-out all;
   border-radius: 0px 0px 300px 300px;
 }
+
 .boton:hover::after {
   top: 0;
 }
+
 /* logo medio */
 .container-logo img {
   width: 100%;
   margin-top: 15px;
 }
+
 .logo-medio img {
   width: 150px;
   height: 150px;
@@ -134,17 +152,44 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* carrito de compras */
-.navbar{
-  padding-right:  150px !important;
+.navbar {
+  padding-right: 150px !important;
 }
+
 /* footer */
+.icon{
+  display: inline-block;
+  font-size: 44px;
+  animation: float 5s ease-in-out-infinite;
+}
+.fab fa-facebook-square{
+  animation-delay: 1s;
+}
+.fa brands fa-whatsapp{
+  animation-delay: 2s;
+}
+@keyframes float{
+0%{
+  transform: translateY(0);
+}
+50%{
+  transform: translateY(-15px);
+}
+100%{
+  transform: translateY(0);
+}
+}
+
+
 footer {
   width: 100%;
   padding: 25px 0px;
   background-color: #ccc;
   margin-top: 15px;
 }
+
 .container__footer {
   display: flex;
   flex-wrap: wrap;
@@ -212,6 +257,19 @@ footer {
 }
 
 /* TIENDA */
+ ul li{
+  list-style: none;
+}
+.ham{
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+
 /* banner */
 .image-container {
   background-image: url("./img/banner.jpg");
@@ -219,6 +277,7 @@ footer {
   position: relative;
   height: 300px;
 }
+
 /* texto baner transparente */
 .text {
   background-color: gray;
@@ -235,84 +294,57 @@ footer {
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
 }
-/* tarjetas */
-.tarjetas{
-  display:flex;
-  padding:10px;
+
+/* titulo presentacionn tarjetas */
+.text-center {
+  font-size: 60px;
+  padding-bottom: 15px;
+}
+
+/* contenedor principal tarjetas */
+.tarjetas {
+  display: flex;
+  padding: 10px;
   margin: auto;
   margin-left: 80px;
   margin-right: 80px;
 }
-
-.text-center{
-  font-size: 60px;
-  padding-bottom: 15px;
-}
-.producto{
+/* tarjetas */
+.producto {
   width: 210px;
   height: 350px;
   box-shadow: 5px 8px 12px black;
   margin: auto;
   text-align: center;
 }
-
-.producto img{
+/* img tarjetas */
+.producto img {
+  height: 130px;
   width: 150px;
-  padding-left:15px;
+  padding-left: 15px;
   padding-top: 20px;
+}
 
+.producto h3 {
+  font-size: 30px;
 }
-.producto h3{
-  font-size: 35px ;
-}
-.precio{
+
+.precio {
   font-size: 25px;
 }
-.btn {
-  color: black!important;
-  background-color: #18a362 !important;
 
+.btn{
+  border: 2px solid rgb(4, 14, 23) !important;
+  background-color: #1f975fb9 !important;
+  font-size: 15px !important;
+  color: white !important;
 }
-.texto-carrito{
-  color: white;
+.btn:hover{
+  color: white !important;
+  transform: translateY(-2px) !important;
+  background-color: #18a362 !important;
 }
-/* botones tienda con efecto
-.boton-tarjeta {
-  width: 100px;
-  height: 30px;
-  background: none;
-  color: black;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  font-size: 17px;
-  font-weight: 800;
-  text-shadow: 6px 6px 6px black;
-  border: 2px solid grey;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: 0.3s ease all;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
+ /* giff cargando */
+#cargando {
+  display: none;
 }
-.boton-tarjeta span {
-  position: relative;
-  z-index: 2;
-  transition: 0.3s ease all;
-}
-.boton-tarjeta::after {
-  content: "";
-  width: 100%;
-  height: 300px;
-  background: #18a362;
-  position: absolute;
-  z-index: 1;
-  top: -300px;
-  left: 0;
-  transition: 0.4s ease-in-out all;
-  border-radius: 0px 0px 300px 300px;
-}
-.boton-tarjeta:hover::after {
-  top: 0;
-}
- */
